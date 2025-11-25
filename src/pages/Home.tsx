@@ -1,17 +1,17 @@
 import { Box, Container, Heading, Text, Button, SimpleGrid, VStack, HStack, Flex } from "@chakra-ui/react";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import Ambulance3D from '../components/Ambulance3D';
+import Ambulance3D from '../components/3D/Ambulance3D';
 
 export default function Home() {
   return (
-    <Box bg="rgb(5, 5, 15)" minH="100vh">
+    <Box bg="rgb(5, 5, 15)" minH="100vh" w="100%">
       <Header />
       
       {/* Hero Section with 3D Model */}
-      <Box pt="16" minH="90vh" display="flex" alignItems="center">
-        <Container maxW="1400px" py={20}>
-          <Flex direction={{ base: "column", lg: "row" }} align="center" gap={12}>
+      <Box pt="16" minH="90vh" display="flex" alignItems="center" w="100%">
+        <Container maxW="1400px" mx="auto" py={20} px={{ base: 6, md: 8, lg: 12 }}>
+          <Flex direction={{ base: "column", lg: "row" }} align="center" justify="space-between" gap={12} w="100%">
             
             {/* Left Content */}
             <VStack align="start" flex={1} gap={8} pr={{ base: 0, lg: 8 }}>
@@ -134,8 +134,8 @@ export default function Home() {
       </Box>
 
       {/* Features Section */}
-      <Box bg="rgba(255, 0, 80, 0.02)" py={20} borderTop="1px solid" borderBottom="1px solid" borderColor="rgba(255, 0, 80, 0.2)">
-        <Container maxW="1400px">
+      <Box bg="rgba(255, 0, 80, 0.02)" py={20} borderTop="1px solid" borderBottom="1px solid" borderColor="rgba(255, 0, 80, 0.2)" w="100%">
+        <Container maxW="1400px" mx="auto" px={{ base: 6, md: 8, lg: 12 }}>
           <VStack gap={16}>
             {/* Section Title */}
             <Box textAlign="center" maxW="800px">
@@ -307,8 +307,8 @@ export default function Home() {
       </Box>
 
       {/* CTA Section */}
-      <Box py={24}>
-        <Container maxW="1200px">
+      <Box py={24} w="100%">
+        <Container maxW="1200px" mx="auto" px={{ base: 6, md: 8, lg: 12 }}>
           <Box 
             textAlign="center" 
             p={16} 
