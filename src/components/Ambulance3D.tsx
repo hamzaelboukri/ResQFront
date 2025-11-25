@@ -9,14 +9,14 @@ function Ambulance() {
 
 export default function Ambulance3D() {
   return (
-    <div style={{ width: "100%", height: "600px", background: "rgb(10, 10, 20)", borderRadius: "12px", overflow: "hidden" }}>
+    <div style={{ width: "100%", height: "600px", background: "rgb(10, 10, 20)", overflow: "hidden" }}>
       <Canvas shadows camera={{ position: [5, 3, 5], fov: 50 }}>
         <Suspense fallback={null}>
           {/* Lighting */}
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} castShadow />
-          <pointLight position={[-10, -10, -5]} intensity={0.5} color="cyan" />
-          <pointLight position={[10, 10, 10]} intensity={0.5} color="#00ffff" />
+          <pointLight position={[-10, -10, -5]} intensity={0.5} color="#ff0050" />
+          <pointLight position={[10, 10, 10]} intensity={0.5} color="#ff0050" />
           
           {/* Model */}
           <Ambulance />
