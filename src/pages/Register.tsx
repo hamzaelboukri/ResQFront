@@ -29,14 +29,25 @@ export default function RegisterPage() {
 
   async function onSubmit(values: RegisterForm) {
     try {
-      await registerUser({
+      const newUser = await registerUser({
         name: values.name,
         email: values.email,
         password: values.password,
         role: values.role ?? "regulator"
       });
 
-      navigate("/login");
+      // Store user and navigate to dashboard based on role
+      localStorage.setItem("user", JSON.stringify(newUser));
+      
+      if (newUser.role === "fleet_manager") {
+        navigate("/fleet");
+      } else if (newUser.role === "regulator") {
+        navigate("/map");
+      } else if (newUser.role === "admin") {
+        navigate("/dashboard");
+      } else {
+        navigate("/dashboard");
+      }
     } catch (err: any) {
       alert(err.message || "Registration error");
     }
@@ -195,7 +206,7 @@ export default function RegisterPage() {
             </Button>
           </VStack>
         </form>
-      </Box>
+        </Box>
       </Box>
     </Box>
   );

@@ -1,5 +1,5 @@
 // src/services/authService.ts
-export const API = "http://localhost:5000"; // Adjust port if needed
+export const API = "http://localhost:3000"; 
 
 export type User = {
   id?: number;

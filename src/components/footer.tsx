@@ -1,5 +1,5 @@
 // src/components/Footer.tsx
-import { Box, Flex, VStack, HStack, Text, Link, Heading } from "@chakra-ui/react";
+import { Box, Flex, VStack, Text, Link, Heading } from "@chakra-ui/react";
 
 export default function Footer() {
   return (

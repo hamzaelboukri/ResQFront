@@ -26,8 +26,16 @@ export default function LoginPage() {
       const user = await loginUser(values.email, values.password);
       localStorage.setItem("user", JSON.stringify(user));
 
-      if (user.role === "fleet_manager") navigate("/fleet");
-      else navigate("/dashboard");
+      // Navigate based on role
+      if (user.role === "fleet_manager") {
+        navigate("/fleet");
+      } else if (user.role === "regulator") {
+        navigate("/map");
+      } else if (user.role === "admin") {
+        navigate("/dashboard");
+      } else {
+        navigate("/dashboard");
+      }
     } catch (err: any) {
       alert(err.message || "Login error");
     }
@@ -125,7 +133,7 @@ export default function LoginPage() {
             </Button>
           </VStack>
         </form>
-      </Box>
+        </Box>
       </Box>
     </Box>
   );

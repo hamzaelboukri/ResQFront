@@ -1,82 +1,446 @@
 {
   "users": [
-    { "id": 1, "name": "Admin", "role": "regulator" },
-    { "id": 2, "name": "Karim El Fassi", "role": "fleet_manager" },
-    { "id": 3, "name": "Fatima Zahra", "role": "regulator" }
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@careflow.com",
+      "password": "123456",
+      "role": "regulator"
+    },
+    {
+      "id": "2",
+      "name": "Karim El Fassi",
+      "email": "karim@gmail.com",
+      "password": "123456",
+      "role": "fleet_manager"
+    },
+    {
+      "id": "3",
+      "name": "Fatima Zahra",
+      "email": "fatima@gmail.com",
+      "password": "123456",
+      "role": "regulator"
+    },
+    {
+      "id": "b9ae",
+      "name": "Uriel Anthony",
+      "email": "tuhaxylyla@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "regulator"
+    }
   ],
-
   "hospitals": [
-    { "id": 1, "name": "CHU Rabat", "lat": 34.0151, "lng": -6.8326 },
-    { "id": 2, "name": "Clinique Agdal", "lat": 34.0065, "lng": -6.8370 },
-    { "id": 3, "name": "Hôpital Ibn Sina", "lat": 34.0198, "lng": -6.8462 }
+    {
+      "id": "1",
+      "name": "CHU Rabat",
+      "lat": 34.0151,
+      "lng": -6.8326
+    },
+    {
+      "id": "2",
+      "name": "Clinique Agdal",
+      "lat": 34.0065,
+      "lng": -6.837
+    },
+    {
+      "id": "3",
+      "name": "Hôpital Ibn Sina",
+      "lat": 34.0198,
+      "lng": -6.8462
+    }
   ],
-
   "crews": [
-    { "id": 1, "driver": "Youssef Amrani", "paramedic": "Sara Benali" },
-    { "id": 2, "driver": "Mohamed Idrissi", "paramedic": "Amina Lahrichi" },
-    { "id": 3, "driver": "Khalid Ouhmad", "paramedic": "Fatima Zahra" },
-    { "id": 4, "driver": "Samir El Hadi", "paramedic": "Meriem Akdi" },
-    { "id": 5, "driver": "Adil Sabah", "paramedic": "Imane Rami" },
-    { "id": 6, "driver": "Brahim Lahlou", "paramedic": "Noura Tazi" },
-    { "id": 7, "driver": "Hamza Lamrani", "paramedic": "Chaimae El Alaoui" },
-    { "id": 8, "driver": "Othmane Farissi", "paramedic": "Zineb Maghribi" },
-    { "id": 9, "driver": "Jawad El Habti", "paramedic": "Salma Outaleb" },
-    { "id": 10, "driver": "Rachid Slaoui", "paramedic": "Houda Maaroufi" }
+    {
+      "id": "1",
+      "driver": "Youssef Amrani",
+      "paramedic": "Sara Benali"
+    },
+    {
+      "id": "2",
+      "driver": "Mohamed Idrissi",
+      "paramedic": "Amina Lahrichi"
+    },
+    {
+      "id": "3",
+      "driver": "Khalid Ouhmad",
+      "paramedic": "Fatima Zahra"
+    },
+    {
+      "id": "4",
+      "driver": "Samir El Hadi",
+      "paramedic": "Meriem Akdi"
+    },
+    {
+      "id": "5",
+      "driver": "Adil Sabah",
+      "paramedic": "Imane Rami"
+    },
+    {
+      "id": "6",
+      "driver": "Brahim Lahlou",
+      "paramedic": "Noura Tazi"
+    },
+    {
+      "id": "7",
+      "driver": "Hamza Lamrani",
+      "paramedic": "Chaimae El Alaoui"
+    },
+    {
+      "id": "8",
+      "driver": "Othmane Farissi",
+      "paramedic": "Zineb Maghribi"
+    },
+    {
+      "id": "9",
+      "driver": "Jawad El Habti",
+      "paramedic": "Salma Outaleb"
+    },
+    {
+      "id": "10",
+      "driver": "Rachid Slaoui",
+      "paramedic": "Houda Maaroufi"
+    }
   ],
-
   "ambulances": [
-    { "id": 1, "identifier": "AMB-001", "status": "available", "lat": 34.0204, "lng": -6.8410, "crewId": 1 },
-    { "id": 2, "identifier": "AMB-002", "status": "busy", "lat": 34.0172, "lng": -6.8251, "crewId": 2 },
-    { "id": 3, "identifier": "AMB-003", "status": "maintenance", "lat": 34.0158, "lng": -6.8351, "crewId": null },
-    { "id": 4, "identifier": "AMB-004", "status": "available", "lat": 34.0112, "lng": -6.8280, "crewId": 3 },
-    { "id": 5, "identifier": "AMB-005", "status": "busy", "lat": 34.0134, "lng": -6.8225, "crewId": 4 },
-    { "id": 6, "identifier": "AMB-006", "status": "available", "lat": 34.0188, "lng": -6.8444, "crewId": 5 },
-    { "id": 7, "identifier": "AMB-007", "status": "available", "lat": 34.0100, "lng": -6.8304, "crewId": 6 },
-    { "id": 8, "identifier": "AMB-008", "status": "busy", "lat": 34.0058, "lng": -6.8372, "crewId": 7 },
-    { "id": 9, "identifier": "AMB-009", "status": "available", "lat": 34.0221, "lng": -6.8480, "crewId": 8 },
-    { "id": 10, "identifier": "AMB-010", "status": "maintenance", "lat": 34.0149, "lng": -6.8400, "crewId": null },
-    { "id": 11, "identifier": "AMB-011", "status": "available", "lat": 34.0170, "lng": -6.8291, "crewId": 9 },
-    { "id": 12, "identifier": "AMB-012", "status": "busy", "lat": 34.0130, "lng": -6.8266, "crewId": 10 },
-    { "id": 13, "identifier": "AMB-013", "status": "available", "lat": 34.0090, "lng": -6.8433, "crewId": 1 },
-    { "id": 14, "identifier": "AMB-014", "status": "available", "lat": 34.0195, "lng": -6.8320, "crewId": 5 },
-    { "id": 15, "identifier": "AMB-015", "status": "busy", "lat": 34.0122, "lng": -6.8492, "crewId": 6 },
-    { "id": 16, "identifier": "AMB-016", "status": "maintenance", "lat": 34.0108, "lng": -6.8277, "crewId": null },
-    { "id": 17, "identifier": "AMB-017", "status": "available", "lat": 34.0041, "lng": -6.8399, "crewId": 7 },
-    { "id": 18, "identifier": "AMB-018", "status": "busy", "lat": 34.0067, "lng": -6.8467, "crewId": 8 },
-    { "id": 19, "identifier": "AMB-019", "status": "available", "lat": 34.0169, "lng": -6.8414, "crewId": 9 },
-    { "id": 20, "identifier": "AMB-020", "status": "available", "lat": 34.0214, "lng": -6.8333, "crewId": 10 }
+    {
+      "id": "1",
+      "identifier": "AMB-001",
+      "status": "available",
+      "lat": 34.0204,
+      "lng": -6.841,
+      "crewId": 1
+    },
+    {
+      "id": "2",
+      "identifier": "AMB-002",
+      "status": "busy",
+      "lat": 34.0172,
+      "lng": -6.8251,
+      "crewId": 2
+    },
+    {
+      "id": "3",
+      "identifier": "AMB-003",
+      "status": "maintenance",
+      "lat": 34.0158,
+      "lng": -6.8351,
+      "crewId": null
+    },
+    {
+      "id": "4",
+      "identifier": "AMB-004",
+      "status": "available",
+      "lat": 34.0112,
+      "lng": -6.828,
+      "crewId": 3
+    },
+    {
+      "id": "5",
+      "identifier": "AMB-005",
+      "status": "busy",
+      "lat": 34.0134,
+      "lng": -6.8225,
+      "crewId": 4
+    },
+    {
+      "id": "6",
+      "identifier": "AMB-006",
+      "status": "available",
+      "lat": 34.0188,
+      "lng": -6.8444,
+      "crewId": 5
+    },
+    {
+      "id": "7",
+      "identifier": "AMB-007",
+      "status": "available",
+      "lat": 34.01,
+      "lng": -6.8304,
+      "crewId": 6
+    },
+    {
+      "id": "8",
+      "identifier": "AMB-008",
+      "status": "busy",
+      "lat": 34.0058,
+      "lng": -6.8372,
+      "crewId": 7
+    },
+    {
+      "id": "9",
+      "identifier": "AMB-009",
+      "status": "available",
+      "lat": 34.0221,
+      "lng": -6.848,
+      "crewId": 8
+    },
+    {
+      "id": "10",
+      "identifier": "AMB-010",
+      "status": "maintenance",
+      "lat": 34.0149,
+      "lng": -6.84,
+      "crewId": null
+    },
+    {
+      "id": "11",
+      "identifier": "AMB-011",
+      "status": "available",
+      "lat": 34.017,
+      "lng": -6.8291,
+      "crewId": 9
+    },
+    {
+      "id": "12",
+      "identifier": "AMB-012",
+      "status": "busy",
+      "lat": 34.013,
+      "lng": -6.8266,
+      "crewId": 10
+    },
+    {
+      "id": "13",
+      "identifier": "AMB-013",
+      "status": "available",
+      "lat": 34.009,
+      "lng": -6.8433,
+      "crewId": 1
+    },
+    {
+      "id": "14",
+      "identifier": "AMB-014",
+      "status": "available",
+      "lat": 34.0195,
+      "lng": -6.832,
+      "crewId": 5
+    },
+    {
+      "id": "15",
+      "identifier": "AMB-015",
+      "status": "busy",
+      "lat": 34.0122,
+      "lng": -6.8492,
+      "crewId": 6
+    },
+    {
+      "id": "16",
+      "identifier": "AMB-016",
+      "status": "maintenance",
+      "lat": 34.0108,
+      "lng": -6.8277,
+      "crewId": null
+    },
+    {
+      "id": "17",
+      "identifier": "AMB-017",
+      "status": "available",
+      "lat": 34.0041,
+      "lng": -6.8399,
+      "crewId": 7
+    },
+    {
+      "id": "18",
+      "identifier": "AMB-018",
+      "status": "busy",
+      "lat": 34.0067,
+      "lng": -6.8467,
+      "crewId": 8
+    },
+    {
+      "id": "19",
+      "identifier": "AMB-019",
+      "status": "available",
+      "lat": 34.0169,
+      "lng": -6.8414,
+      "crewId": 9
+    },
+    {
+      "id": "20",
+      "identifier": "AMB-020",
+      "status": "available",
+      "lat": 34.0214,
+      "lng": -6.8333,
+      "crewId": 10
+    }
   ],
-
   "incidents": [
-    { "id": 1, "address": "Avenue Hassan II", "severity": "critical", "status": "pending", "lat": 34.0189, "lng": -6.8362, "patient": "Unknown", "assignedAmbulanceId": null },
-    { "id": 2, "address": "Rue Oued Fès", "severity": "medium", "status": "in_progress", "lat": 34.0101, "lng": -6.8214, "patient": "Lina", "assignedAmbulanceId": 2 },
-    { "id": 3, "address": "Hay Riad", "severity": "low", "status": "completed", "lat": 34.0087, "lng": -6.8498, "patient": "Rachid", "assignedAmbulanceId": 4 },
-    { "id": 4, "address": "Avenue Fal Ould Oumeir", "severity": "critical", "status": "pending", "lat": 34.0091, "lng": -6.8150, "patient": "Unknown", "assignedAmbulanceId": null },
-    { "id": 5, "address": "Boulevard Annakhil", "severity": "medium", "status": "pending", "lat": 34.0066, "lng": -6.8401, "patient": "John", "assignedAmbulanceId": null },
-    { "id": 6, "address": "Bab El Had", "severity": "high", "status": "in_progress", "lat": 34.0212, "lng": -6.8368, "patient": "Sara", "assignedAmbulanceId": 12 },
-    { "id": 7, "address": "Avenue Al Atlas", "severity": "low", "status": "completed", "lat": 34.0145, "lng": -6.8422, "patient": "Zakaria", "assignedAmbulanceId": 8 },
-    { "id": 8, "address": "Rue Hongrie", "severity": "critical", "status": "pending", "lat": 34.0190, "lng": -6.8298, "patient": "Unknown", "assignedAmbulanceId": null },
-    { "id": 9, "address": "Avenue France", "severity": "high", "status": "pending", "lat": 34.0174, "lng": -6.8339, "patient": "Hassan", "assignedAmbulanceId": null },
-    { "id": 10, "address": "Agdal Center", "severity": "medium", "status": "in_progress", "lat": 34.0124, "lng": -6.8302, "patient": "Samira", "assignedAmbulanceId": 5 }
+    {
+      "id": "1",
+      "address": "Avenue Hassan II",
+      "severity": "critical",
+      "status": "pending",
+      "lat": 34.0189,
+      "lng": -6.8362,
+      "patient": "Unknown",
+      "assignedAmbulanceId": null
+    },
+    {
+      "id": "2",
+      "address": "Rue Oued Fès",
+      "severity": "medium",
+      "status": "in_progress",
+      "lat": 34.0101,
+      "lng": -6.8214,
+      "patient": "Lina",
+      "assignedAmbulanceId": 2
+    },
+    {
+      "id": "3",
+      "address": "Hay Riad",
+      "severity": "low",
+      "status": "completed",
+      "lat": 34.0087,
+      "lng": -6.8498,
+      "patient": "Rachid",
+      "assignedAmbulanceId": 4
+    },
+    {
+      "id": "4",
+      "address": "Avenue Fal Ould Oumeir",
+      "severity": "critical",
+      "status": "pending",
+      "lat": 34.0091,
+      "lng": -6.815,
+      "patient": "Unknown",
+      "assignedAmbulanceId": null
+    },
+    {
+      "id": "5",
+      "address": "Boulevard Annakhil",
+      "severity": "medium",
+      "status": "pending",
+      "lat": 34.0066,
+      "lng": -6.8401,
+      "patient": "John",
+      "assignedAmbulanceId": null
+    },
+    {
+      "id": "6",
+      "address": "Bab El Had",
+      "severity": "high",
+      "status": "in_progress",
+      "lat": 34.0212,
+      "lng": -6.8368,
+      "patient": "Sara",
+      "assignedAmbulanceId": 12
+    },
+    {
+      "id": "7",
+      "address": "Avenue Al Atlas",
+      "severity": "low",
+      "status": "completed",
+      "lat": 34.0145,
+      "lng": -6.8422,
+      "patient": "Zakaria",
+      "assignedAmbulanceId": 8
+    },
+    {
+      "id": "8",
+      "address": "Rue Hongrie",
+      "severity": "critical",
+      "status": "pending",
+      "lat": 34.019,
+      "lng": -6.8298,
+      "patient": "Unknown",
+      "assignedAmbulanceId": null
+    },
+    {
+      "id": "9",
+      "address": "Avenue France",
+      "severity": "high",
+      "status": "pending",
+      "lat": 34.0174,
+      "lng": -6.8339,
+      "patient": "Hassan",
+      "assignedAmbulanceId": null
+    },
+    {
+      "id": "10",
+      "address": "Agdal Center",
+      "severity": "medium",
+      "status": "in_progress",
+      "lat": 34.0124,
+      "lng": -6.8302,
+      "patient": "Samira",
+      "assignedAmbulanceId": 5
+    }
   ],
-
   "maintenance": [
-    { "id": 1, "ambulanceId": 3, "date": "2025-11-20", "type": "Engine Repair", "cost": 2300 },
-    { "id": 2, "ambulanceId": 10, "date": "2025-11-22", "type": "Oil Change", "cost": 300 },
-    { "id": 3, "ambulanceId": 16, "date": "2025-11-21", "type": "Brake Check", "cost": 450 }
+    {
+      "id": "1",
+      "ambulanceId": 3,
+      "date": "2025-11-20",
+      "type": "Engine Repair",
+      "cost": 2300
+    },
+    {
+      "id": "2",
+      "ambulanceId": 10,
+      "date": "2025-11-22",
+      "type": "Oil Change",
+      "cost": 300
+    },
+    {
+      "id": "3",
+      "ambulanceId": 16,
+      "date": "2025-11-21",
+      "type": "Brake Check",
+      "cost": 450
+    }
   ],
-
   "activity": [
-    { "id": 1, "type": "assignment", "message": "AMB-002 assigned to Rue Oued Fès", "timestamp": "2025-11-24T08:55:00" },
-    { "id": 2, "type": "incident_created", "message": "Critical incident at Hassan II", "timestamp": "2025-11-24T09:30:00" },
-    { "id": 3, "type": "status_change", "message": "AMB-003 moved to maintenance", "timestamp": "2025-11-24T08:20:00" },
-    { "id": 4, "type": "assignment", "message": "AMB-012 assigned to Bab El Had", "timestamp": "2025-11-24T09:10:00" },
-    { "id": 5, "type": "incident_completed", "message": "Incident at Hay Riad completed", "timestamp": "2025-11-23T16:40:00" }
+    {
+      "id": "1",
+      "type": "assignment",
+      "message": "AMB-002 assigned to Rue Oued Fès",
+      "timestamp": "2025-11-24T08:55:00"
+    },
+    {
+      "id": "2",
+      "type": "incident_created",
+      "message": "Critical incident at Hassan II",
+      "timestamp": "2025-11-24T09:30:00"
+    },
+    {
+      "id": "3",
+      "type": "status_change",
+      "message": "AMB-003 moved to maintenance",
+      "timestamp": "2025-11-24T08:20:00"
+    },
+    {
+      "id": "4",
+      "type": "assignment",
+      "message": "AMB-012 assigned to Bab El Had",
+      "timestamp": "2025-11-24T09:10:00"
+    },
+    {
+      "id": "5",
+      "type": "incident_completed",
+      "message": "Incident at Hay Riad completed",
+      "timestamp": "2025-11-23T16:40:00"
+    }
   ],
-
   "history": [
-    { "id": 1, "incidentId": 3, "ambulanceId": 4, "durationMinutes": 27, "responseTime": 6 },
-    { "id": 2, "incidentId": 7, "ambulanceId": 8, "durationMinutes": 33, "responseTime": 8 },
-    { "id": 3, "incidentId": 10, "ambulanceId": 5, "durationMinutes": 40, "responseTime": 10 }
+    {
+      "id": "1",
+      "incidentId": 3,
+      "ambulanceId": 4,
+      "durationMinutes": 27,
+      "responseTime": 6
+    },
+    {
+      "id": "2",
+      "incidentId": 7,
+      "ambulanceId": 8,
+      "durationMinutes": 33,
+      "responseTime": 8
+    },
+    {
+      "id": "3",
+      "incidentId": 10,
+      "ambulanceId": 5,
+      "durationMinutes": 40,
+      "responseTime": 10
+    }
   ]
 }
