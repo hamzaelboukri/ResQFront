@@ -16,7 +16,7 @@ export default function Ambulance3D({
   scale = 1,
   status = 'available'
 }: Ambulance3DProps) {
-  const groupRef = useRef<any>();
+  const groupRef = useRef<any>(null);
   const lightRef = useRef<Mesh>(null);
 
   // Rotate the light on top

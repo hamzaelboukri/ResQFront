@@ -245,7 +245,7 @@ export default function AddAmbulanceModal({ isOpen, onClose }: AddAmbulanceModal
                 <option value="">Sélectionner un équipage</option>
                 {crews?.map((crew: any) => (
                   <option key={crew.id} value={crew.id}>
-                    Équipe {crew.id} - {crew.members.map((m: any) => m.name).join(", ")}
+                    Équipe {crew.id} - {crew.members?.map((m: any) => m.name).join(", ") || "Aucun membre"}
                   </option>
                 ))}
               </select>

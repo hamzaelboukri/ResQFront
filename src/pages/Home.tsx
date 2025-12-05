@@ -1,7 +1,7 @@
 import { Box, Container, Heading, Text, Button, SimpleGrid, VStack, HStack, Flex } from "@chakra-ui/react";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import Ambulance3D from '../components/3D/Ambulance3D';
+import Ambulance3D from '../components/Ambulance3D';
 
 export default function Home() {
   return (

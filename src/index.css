@@ -18,3 +18,36 @@ body {
   background: rgb(5, 5, 15);
   color: #e0e0e0;
 }
+
+/* Ambulance marker animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.2);
+  }
+}
+
+.ambulance-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.incident-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.ambulance-3d-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.ambulance-3d-marker-container {
+  background: transparent !important;
+  border: none !important;
+  pointer-events: auto;
+}

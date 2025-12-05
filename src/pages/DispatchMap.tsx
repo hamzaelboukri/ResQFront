@@ -7,19 +7,25 @@ import { useQuery } from "@tanstack/react-query";
 import Header from "../components/header";
 import Loader from "../components/ui/Loader";
 import StatusBadge from "../components/ui/StatusBadge";
+import { Ambulance3DMarker } from "../components/map/Ambulance3DMarker";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-// Fix for default markers
-import icon from "leaflet/dist/images/marker-icon.png";
-import iconShadow from "leaflet/dist/images/marker-shadow.png";
-let DefaultIcon = L.icon({
-  iconUrl: icon,
-  shadowUrl: iconShadow,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
+// Create incident icon (red alert marker)
+const incidentIcon = L.divIcon({
+  html: `
+    <div style="position: relative; width: 30px; height: 30px;">
+      <svg width="30" height="30" viewBox="0 0 30 30" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
+        <circle cx="15" cy="15" r="12" fill="#ef4444" opacity="0.9"/>
+        <text x="15" y="20" text-anchor="middle" fill="white" font-size="18" font-weight="bold">!</text>
+      </svg>
+    </div>
+  `,
+  className: 'incident-marker',
+  iconSize: [30, 30],
+  iconAnchor: [15, 15],
+  popupAnchor: [0, -15]
 });
-L.Marker.prototype.options.icon = DefaultIcon;
 
 const fetchAmbulances = async () => {
   const response = await fetch("http://localhost:3000/ambulances");
@@ -51,9 +57,9 @@ export default function DispatchMap() {
   const center: [number, number] = [33.5731, -7.5898]; // Casablanca
 
   return (
-    <Box minH="100vh" bg="rgb(5,5,15)">
+    <Box minH="100vh" bg="rgb(5,5,15)" display="flex" flexDirection="column">
       <Header />
-      <Container maxW="container.xl" py={8}>
+      <Container maxW="container.xl" py={8} mx="auto" w="100%">
         {/* Header Section */}
         <Box
           mb={8}
@@ -213,22 +219,9 @@ export default function DispatchMap() {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
 
-            {/* Ambulance Markers */}
+            {/* Ambulance Markers with 3D Models */}
             {ambulances?.map((ambulance: any) => (
-              <Marker
-                key={ambulance.id}
-                position={[ambulance.lat, ambulance.lng]}
-              >
-                <Popup>
-                  <Box>
-                    <Text fontWeight="bold">🚑 {ambulance.identifier}</Text>
-                    <StatusBadge status={ambulance.status} />
-                    <Text fontSize="sm" mt={2}>
-                      Crew ID: {ambulance.crewId}
-                    </Text>
-                  </Box>
-                </Popup>
-              </Marker>
+              <Ambulance3DMarker key={ambulance.id} ambulance={ambulance} />
             ))}
 
             {/* Incident Markers */}
@@ -236,7 +229,10 @@ export default function DispatchMap() {
               if (!incident.location?.lat || !incident.location?.lng) return null;
               return (
                 <React.Fragment key={incident.id}>
-                  <Marker position={[incident.location.lat, incident.location.lng]}>
+                  <Marker 
+                    position={[incident.location.lat, incident.location.lng]}
+                    icon={incidentIcon}
+                  >
                     <Popup>
                       <Box>
                         <Text fontWeight="bold">🚨 Incident #{incident.id}</Text>

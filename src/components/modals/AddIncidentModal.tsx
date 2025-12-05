@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { X, AlertCircle, Save } from "lucide-react";
 import { useState } from "react";
-import { useMutation, useQueryClient, useQuery } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 interface AddIncidentModalProps {
   isOpen: boolean;
@@ -37,13 +37,7 @@ export default function AddIncidentModal({ isOpen, onClose }: AddIncidentModalPr
     timestamp: new Date().toISOString(),
   });
 
-  const { data: ambulances } = useQuery({
-    queryKey: ["ambulances"],
-    queryFn: async () => {
-      const res = await fetch("http://localhost:3000/ambulances");
-      return res.json();
-    },
-  });
+
 
   const mutation = useMutation({
     mutationFn: async (newIncident: any) => {

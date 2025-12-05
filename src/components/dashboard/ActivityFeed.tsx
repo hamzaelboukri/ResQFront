@@ -1,7 +1,6 @@
 import { Box, VStack, HStack, Text, Badge, Heading } from "@chakra-ui/react";
 import { Activity, MapPin, AlertCircle, CheckCircle } from "lucide-react";
 import StatusBadge from "../ui/StatusBadge";
-import Loader from "../ui/Loader";
 
 interface ActivityItem {
   id: string;

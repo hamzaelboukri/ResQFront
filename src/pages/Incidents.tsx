@@ -49,9 +49,9 @@ export default function Incidents() {
   };
 
   return (
-    <Box minH="100vh" bg="rgb(5,5,15)">
+    <Box minH="100vh" bg="rgb(5,5,15)" display="flex" flexDirection="column">
       <Header />
-      <Container maxW="container.xl" py={8}>
+      <Container maxW="container.xl" py={8} mx="auto" w="100%">
         {/* Header Section */}
         <Box
           mb={8}
