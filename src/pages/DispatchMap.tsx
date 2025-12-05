@@ -4,7 +4,7 @@ import { Box, Container, Flex, Heading, Text, Button } from "@chakra-ui/react";
 import { MapContainer, TileLayer, Marker, Popup, Circle } from "react-leaflet";
 import { AlertCircle, Ambulance, Filter } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
-import Header from "../components/header";
+import Sidebar from "../components/dashboard/Sidebar";
 import Loader from "../components/ui/Loader";
 import StatusBadge from "../components/ui/StatusBadge";
 import { Ambulance3DMarker } from "../components/map/Ambulance3DMarker";
@@ -57,9 +57,13 @@ export default function DispatchMap() {
   const center: [number, number] = [33.5731, -7.5898]; // Casablanca
 
   return (
-    <Box minH="100vh" bg="rgb(5,5,15)" display="flex" flexDirection="column">
-      <Header />
-      <Container maxW="container.xl" py={8} mx="auto" w="100%">
+    <Box minH="100vh" bg="rgb(5,5,15)" display="flex">
+      <Sidebar 
+        activeIncidents={incidents?.filter((i: any) => i.status === "pending" || i.status === "en_route").length || 0}
+        availableAmbulances={ambulances?.filter((a: any) => a.status === "available").length || 0}
+      />
+      <Box ml="280px" flex="1">
+        <Container maxW="container.xl" py={8} mx="auto" w="100%">
         {/* Header Section */}
         <Box
           mb={8}
@@ -281,6 +285,7 @@ export default function DispatchMap() {
           </Flex>
         </Flex>
       </Container>
+      </Box>
     </Box>
   );
 }

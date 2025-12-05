@@ -3,7 +3,7 @@ import { Box, Container, Flex, Heading, Text, Button, Input, Grid } from "@chakr
 import { Ambulance, Search, Plus, MapPin, Users, Clock } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import Header from "../components/header";
+import Sidebar from "../components/dashboard/Sidebar";
 import Loader from "../components/ui/Loader";
 import StatusBadge from "../components/ui/StatusBadge";
 import AddAmbulanceModal from "../components/modals/AddAmbulanceModal";
@@ -52,9 +52,13 @@ export default function Fleet() {
   };
 
   return (
-    <Box minH="100vh" bg="rgb(5,5,15)" display="flex" flexDirection="column">
-      <Header />
-      <Container maxW="container.xl" py={8} mx="auto" w="100%">
+    <Box minH="100vh" bg="rgb(5,5,15)" display="flex">
+      <Sidebar 
+        activeIncidents={0}
+        availableAmbulances={stats.available}
+      />
+      <Box ml="280px" flex="1">
+        <Container maxW="container.xl" py={8} mx="auto" w="100%">
         {/* Header Section */}
         <Box
           mb={8}
@@ -213,7 +217,7 @@ export default function Fleet() {
                     <Flex align="center" gap={2} color="gray.400">
                       <Users size={16} />
                       <Text fontSize="sm">
-                        {crew.members.map((m: any) => m.name).join(", ")}
+                        {crew.members?.map((m: any) => m.name).join(", ") || "No members"}
                       </Text>
                     </Flex>
                   )}
@@ -282,6 +286,7 @@ export default function Fleet() {
           </Box>
         </Grid>
       </Container>
+      </Box>
       
       <AddAmbulanceModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Ambulance3DModal 

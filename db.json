@@ -261,6 +261,22 @@
       "lat": 34.0214,
       "lng": -6.8333,
       "crewId": 10
+    },
+    {
+      "id": "140b",
+      "identifier": "Quo eiusmod modi qui",
+      "status": "available",
+      "lat": 19,
+      "lng": 40,
+      "crewId": "2"
+    },
+    {
+      "id": "8da9",
+      "identifier": "Recusandae Asperior",
+      "status": "available",
+      "lat": 5,
+      "lng": 71,
+      "crewId": "4"
     }
   ],
   "incidents": [
@@ -363,6 +379,91 @@
       "lng": -6.8302,
       "patient": "Samira",
       "assignedAmbulanceId": 5
+    },
+    {
+      "id": "9972",
+      "severity": "critical",
+      "status": "en_route",
+      "address": "Id pariatur Autem ",
+      "description": "Reprehenderit conseq",
+      "patient": {
+        "name": "In ea nihil eligendi",
+        "age": "83",
+        "gender": "male"
+      },
+      "location": {
+        "lat": 3,
+        "lng": 78
+      },
+      "timestamp": "2025-12-05T20:29:09.815Z"
+    },
+    {
+      "id": "f857",
+      "severity": "low",
+      "status": "completed",
+      "address": "Lorem dolores ipsa ",
+      "description": "Rerum quis minus cul",
+      "patient": {
+        "name": "Nisi earum excepturi",
+        "age": "58",
+        "gender": "male"
+      },
+      "location": {
+        "lat": 73,
+        "lng": 11
+      },
+      "timestamp": "2025-12-05T20:32:34.939Z"
+    },
+    {
+      "id": "7760",
+      "severity": "medium",
+      "status": "completed",
+      "address": "Occaecat rerum nulla",
+      "description": "Amet libero volupta",
+      "patient": {
+        "name": "Maiores ipsum odio ",
+        "age": "78",
+        "gender": "female"
+      },
+      "location": {
+        "lat": 56,
+        "lng": 76
+      },
+      "timestamp": "2025-12-05T20:32:40.406Z"
+    },
+    {
+      "id": "397a",
+      "severity": "low",
+      "status": "on_scene",
+      "address": "Beatae dolor excepte",
+      "description": "Itaque sint iusto a",
+      "patient": {
+        "name": "Corrupti delectus ",
+        "age": "80",
+        "gender": "male"
+      },
+      "location": {
+        "lat": 9,
+        "lng": 37
+      },
+      "timestamp": "2025-12-05T20:33:06.350Z"
+    },
+    {
+      "id": "b8e9",
+      "severity": "high",
+      "status": "en_route",
+      "address": "Elit vel est velit",
+      "description": "Saepe voluptatem asp",
+      "patient": {
+        "name": "test",
+        "age": "30",
+        "gender": "other"
+      },
+      "location": {
+        "lat": 29,
+        "lng": 15
+      },
+      "timestamp": "2025-12-05T20:33:21.212Z"
     }
   ],
   "maintenance": [

@@ -3,7 +3,7 @@ import { Box, Container, Flex, Heading, Text, Button, Input, Grid } from "@chakr
 import { AlertCircle, Search, Plus, MapPin, User } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import Header from "../components/header";
+import Sidebar from "../components/dashboard/Sidebar";
 import Loader from "../components/ui/Loader";
 import StatusBadge from "../components/ui/StatusBadge";
 import AddIncidentModal from "../components/modals/AddIncidentModal";
@@ -49,9 +49,13 @@ export default function Incidents() {
   };
 
   return (
-    <Box minH="100vh" bg="rgb(5,5,15)" display="flex" flexDirection="column">
-      <Header />
-      <Container maxW="container.xl" py={8} mx="auto" w="100%">
+    <Box minH="100vh" bg="rgb(5,5,15)" display="flex">
+      <Sidebar 
+        activeIncidents={stats.pending}
+        availableAmbulances={0}
+      />
+      <Box ml="280px" flex="1">
+        <Container maxW="container.xl" py={8} mx="auto" w="100%">
         {/* Header Section */}
         <Box
           mb={8}
@@ -304,6 +308,7 @@ export default function Incidents() {
           </Box>
         </Grid>
       </Container>
+      </Box>
       
       <AddIncidentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </Box>

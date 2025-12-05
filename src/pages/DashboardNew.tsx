@@ -76,15 +76,15 @@ export default function DashboardNew() {
   const avgResponseTime = incidents?.length > 0 ? "8.5 min" : "N/A";
 
   return (
-    <Box bg="rgb(5, 5, 15)" minH="100vh">
+    <Box bg="rgb(5, 5, 15)" minH="100vh" display="flex">
       <Sidebar 
         activeIncidents={activeIncidents} 
         availableAmbulances={availableAmbulances}
       />
 
-      <Box ml="280px">
+      <Box ml="280px" flex="1">
         
-        <Container maxW="1600px" pt="24" pb="12" px={{ base: 4, md: 8 }}>
+        <Container maxW="1600px" pt="8" pb="12" px={{ base: 4, md: 8 }}>
         <VStack align="stretch" gap={8}>
           {/* Hero Section */}
           <HeroSection
